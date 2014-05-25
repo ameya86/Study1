@@ -11,4 +11,16 @@ public class AccountId {
         dto.id = this.id;
         return dto;
     }
+
+    public boolean equals(Object obj) {
+        if (obj instanceof String) {
+            return this.id.equals(obj);
+        }
+
+        if (!(obj instanceof AccountId)) {
+            return false;
+        }
+
+        return obj.equals(this.id);
+    }
 }
