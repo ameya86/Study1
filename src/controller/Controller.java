@@ -2,15 +2,17 @@ package controller;
 
 
 public abstract class Controller {
-    protected Controller nextController;
-    protected String nextAction;
+    protected static Controller onlyInstance = null;
+    protected Controller nextController = null;
+    protected String nextAction = null;
 
-    public Controller() {
-        this.nextAction = "init";
-        this.nextController = this;
-    }
+    protected Controller() {}
 
     public abstract boolean action(String action);
+
+    public static Controller getInstance() {
+        return null;
+    }
 
     public Controller nextController() {
         return this.nextController;

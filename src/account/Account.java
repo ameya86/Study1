@@ -15,6 +15,8 @@ public class Account {
 
     public AccountDTO fields() {
         AccountDTO dto = new AccountDTO();
+        this.id.copyValue(dto);
+        this.name.copyValue(dto);
         return dto;
     }
 }

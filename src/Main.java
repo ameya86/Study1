@@ -8,8 +8,8 @@ public class Main {
         Controller controller;
         String action;
 
-        controller = new WelcomeController();
-        action = controller.nextAction();
+        controller = WelcomeController.getInstance();
+        action = "init";
 
         while(controller != null) {
             if (!controller.action(action)) {
