@@ -43,6 +43,7 @@ public class AccountController extends Controller{
         account = AccountManager.create(firstName, lastName);
         AccountDTO dto = account.fields();
         Logger.info("Your ID is \"" + dto.id + "\".");
+        Logger.info("Welcome " + dto.fullname + ".");
 
         this.nextController = ItemController.getInstance();
         this.nextAction = "init";

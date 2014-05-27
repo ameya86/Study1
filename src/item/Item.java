@@ -1,6 +1,7 @@
 package item;
 
 
+
 public class Item {
     private Money price;
     private ItemInfo info;
@@ -15,5 +16,9 @@ public class Item {
     	this.info.copyValue(dto);
     	this.price.copyValue(dto);
     	return dto;
+    }
+
+    public boolean checkId(ItemId id2) {
+        return this.info.checkId(id2);
     }
 }

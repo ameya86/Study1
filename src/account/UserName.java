@@ -10,8 +10,9 @@ public class UserName {
     }
 
     public AccountDTO copyValue(AccountDTO dto) {
-        dto.firstName = this.firstName.copyValue();
-        dto.lastName = this.lastName.copyValue();
+        dto.firstname = this.firstName.copyValue();
+        dto.lastname = this.lastName.copyValue();
+        dto.fullname = dto.firstname + " " + dto.lastname;
         return dto;
     }
 
